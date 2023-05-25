@@ -73,7 +73,7 @@
     }else{
       $_SESSION['admin']=$dangnhap;
                
-      header('location:index.php'); 
+      header('location:index.php?action=sanpham'); 
     }             
   }
 ?>
