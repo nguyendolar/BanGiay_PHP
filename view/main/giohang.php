@@ -20,14 +20,14 @@
 				$kqa=mysqli_fetch_array($rs);
 ?>
 				<tbody>
-					<td class="td"><img class="img-gh" src="/JsSneaker/webroot/img/sanpham/<?php echo $kqa['AnhNen'];?>"></td>
+					<td class="td"><img class="img-gh" src="/shopgiay/webroot/img/sanpham/<?php echo $kqa['AnhNen'];?>"></td>
 					<td class="td2"><a href="index.php?view=chitietsanpham&masp=<?php echo $item_cart['MaSP']; ?>" ><p><?php echo $item_cart['TenSP'];?></p></a>
 						<p><?php echo $item_cart['Size'];?> / <?php echo $item_cart['Mau'];?></p>
-						<a href="/JsSneaker/view/cart/cart_update.php?xoa1=xoa&masp=<?php echo $item_cart['MaSP'];?>&mau=<?php echo $item_cart['Mau'];?>&size=<?php echo $item_cart['Size'];?>"><p>Xóa</p></a>
+						<a href="/shopgiay/view/cart/cart_update.php?xoa1=xoa&masp=<?php echo $item_cart['MaSP'];?>&mau=<?php echo $item_cart['Mau'];?>&size=<?php echo $item_cart['Size'];?>"><p>Xóa</p></a>
 					</td>
 					<td><?php echo number_format($item_cart['DonGia']).' ₫';?></td>
 					<td><span class="input-group-btn">
-							<a href="/JsSneaker/view/cart/cart_update.php?tru=tru&masp=<?php echo $item_cart['MaSP'];?>&mau=<?php echo $item_cart['Mau'];?>&size=<?php echo $item_cart['Size'];?>" title="">
+							<a href="/shopgiay/view/cart/cart_update.php?tru=tru&masp=<?php echo $item_cart['MaSP'];?>&mau=<?php echo $item_cart['Mau'];?>&size=<?php echo $item_cart['Size'];?>" title="">
 								<button  class="nut-" <?php if($item_cart['SoLuong']<=1){echo 'disabled="disabled"';}?> type="button">-</button>
 							</a>
 						</span>
@@ -35,7 +35,7 @@
 							<input   class="nutsl" type="text" value="<?php echo $item_cart['SoLuong'];?>">
 						</span>			
 <!-- Cộng số lượng -->	<span  class="input-group-btn boder">
-							<a href="/JsSneaker/view/cart/cart_update.php?cong=cong&masp=<?php echo $item_cart['MaSP'];?>&mau=<?php echo $item_cart['Mau'];?>&size=<?php echo $item_cart['Size'];?>" title="">
+							<a href="/shopgiay/view/cart/cart_update.php?cong=cong&masp=<?php echo $item_cart['MaSP'];?>&mau=<?php echo $item_cart['Mau'];?>&size=<?php echo $item_cart['Size'];?>" title="">
 								<button class="nutc" <?php if($item_cart['SoLuong']>=10){echo 'disabled="disabled"';}?> type="button">+</button>
 							</a>
 						</span>
@@ -44,7 +44,7 @@
 				</tbody>
 <?php 	$money=$money+$tt; }
 	 ?>
-				<?php if(isset($_SESSION['cart_product'])){echo '<td><a href="/JsSneaker/view/cart/cart_update.php?xoaall=xoaall" title="">xóa tất cả</a></td>	';}?><th></th><th></th>
+				<?php if(isset($_SESSION['cart_product'])){echo '<td><a href="/shopgiay/view/cart/cart_update.php?xoaall=xoaall" title="">xóa tất cả</a></td>	';}?><th></th><th></th>
 					<th colspan="2" rowspan="2" class="tt" style="text-align: right;"> 
 							<?php if(isset($_SESSION['cart_product'])){echo	'Tổng :  '.number_format($money).' ₫'; }?><br>
 					</th>

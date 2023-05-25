@@ -1,16 +1,16 @@
-<div class="container-fluid header">
+<!-- <div class="container-fluid header">
 	<div class="row ">
 		<div class="col-md-12" >
-		<a href="index.php" title="" >	<img class="logoimg" src="webroot/img/logo2.png" style="margin : 15px 450px" ></a>
+		 <a href="index.php" title="" ><img class="logoimg" src="webroot/img/logo2.png" style="margin : 10px 450px; height : 50px" ></a>
 		</div>
 		
 		
-		<!-- <div class="col-md-2 lh"><a href="?view=hethong">HỆ THỐNG CỬA HÀNG</a></div>
-		<div class="col-md-1  lh"><a href="?view=hethong">Liên Hệ</a></div> -->
+		 <div class="col-md-2 lh"><a href="?view=hethong">HỆ THỐNG CỬA HÀNG</a></div>
+		<div class="col-md-1  lh"><a href="?view=hethong">Liên Hệ</a></div> 
 		
 		
 	</div>
-</div>
+</div> -->
 <div class="container-fluid menu" id="menu">
 	<div class="row">
 		<div class="col-md-4">
@@ -20,7 +20,7 @@
 					<?php $dmsql="SELECT * FROM `danhmuc`";
                     $rss=mysqli_query($conn,$dmsql); 
                     while ($row=mysqli_fetch_array($rss)) { ?>	
-						<li><a href="/JsSneaker/index.php?view=dksanpham&madm=<?php echo $row['MaDM'];?>&t=<?php echo $row['TenDM'] ?>" ><?php echo $row['TenDM'];?></a></li>
+						<li><a href="/shopgiay/index.php?view=dksanpham&madm=<?php echo $row['MaDM'];?>&t=<?php echo $row['TenDM'] ?>" ><?php echo $row['TenDM'];?></a></li>
 					<?php  } ?>
 					</ul>
 				</li>
@@ -30,7 +30,7 @@
 					<?php $dmsql="SELECT * FROM `nhacc`";
                     $rss=mysqli_query($conn,$dmsql);                 
                     while ($row=mysqli_fetch_array($rss)) { ?>
-						<li><a href="/JsSneaker/index.php?view=dksanpham&mancc=<?php echo $row['MaNCC'];?>&t=<?php echo $row['TenNCC'] ?>" ><?php echo $row['TenNCC'];?></a></li>
+						<li><a href="/shopgiay/index.php?view=dksanpham&mancc=<?php echo $row['MaNCC'];?>&t=<?php echo $row['TenNCC'] ?>" ><?php echo $row['TenNCC'];?></a></li>
 					 <?php  } ?>
 					</ul>
 				</li>
@@ -38,8 +38,8 @@
 				<!-- <li class="w"><a href="?view=about" title="">ABOUT US</a></li> -->
 			</ul>
 		</div>
-		<div class="col-md-4 " style="margin-top : -5px"> 
-			<form action="index.php?view=timkiem" method="POST" accept-charset="utf-8">
+		<div class="col-md-4 " style="margin-top : 25px"> 
+			<!-- <form action="index.php?view=timkiem" method="POST" accept-charset="utf-8">
 				<div class="input-group tk" style="width:351px !important">
 	                <input class="form-control border-secondary py-2" name="search" type="search" placeholder="Search" >
 	                <div class="input-group-append">
@@ -48,7 +48,8 @@
 	                    </button>
 	                </div>
             	</div>
-			</form>  
+			</form>   -->
+			<a href="index.php" title="" ><img class="logoimg" src="webroot/img/logo2.png" style="height : 50px" ></a>
 		</div>
 		<div class="col-4 ">
 			<ul class="menu-r">
@@ -56,11 +57,10 @@
 			            if (isset($_SESSION['login'])) {  
 			                  $ten=$_SESSION['login'];
 			                 ?>
-			                  <li class="w"><i class="fas fa-user-alt"></i>
+			                  <li class="w"><?php echo $ten['TenKH']; ?><i class="fas fa-user-alt"></i>
 			                  <ul class="sub-menu">
-			                    <li>Hi, <?php echo $ten['TenKH']; ?></li>
-			                    <li><a href="?view=thongtinkhachhang">Cập nhập thông tin</a></li>
-			                    <li><a href="view/main/dangxuat.php">Logout</a></li>
+			                    <!-- <li><a href="?view=thongtinkhachhang">Cập nhập thông tin</a></li> -->
+			                    <li><a href="view/main/dangxuat.php">Đăng xuất</a></li>
 			                </ul></li>
 	     		 <?php  }else{
 	     		 		echo '<li class="w"><a href="index.php?view=login" >Đăng Nhập</a>

@@ -17,11 +17,11 @@
 			$sql6="INSERT INTO `binhluan`( `MaSP`, `MaKH`, `NoiDung`) VALUES('$masp',".$tenkhh['MaKH'].",'$nd')";
 			$query6=mysqli_query($conn,$sql6);
 			if ($query6) {
-				header('location:/JsSneaker/index.php?view=chitietsanpham&masp='.$masp."&a='");
+				header('location:/shopgiay/index.php?view=chitietsanpham&masp='.$masp."&a='");
 			}
 			
 	} 
 	else {
-		header('location:/JsSneaker/index.php?view=login');
+		header('location:/shopgiay/index.php?view=login');
 	}
 ?>

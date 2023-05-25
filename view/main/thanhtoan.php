@@ -34,24 +34,9 @@
 			</div>
 			<div class="col-5 ft2">
 				<div class="col-md-12  boderbot">
-					<center><h6>Phương thức thanh toán</h6></center>
-				</div><br>
-				<div class="boder1">
-					    <div class="custom-control custom-checkbox" >
-					      <input type="radio" class="custom-control-input" id="customCheck1"  checked>
-					      <label class="custom-control-label" for="customCheck1">Thanh toán  khi nhận hàng</label>
-					    </div>
-					    <div class="custom-control custom-checkbox" >
-					      <input type="radio" class="custom-control-input" id="customCheck2"  disabled >
-					      <label class="custom-control-label" for="customCheck2"> Thanh toán online <label style="font-size: 15px;">(coming soom)</label></label>
-					    </div> 						
-				</div>
-		
-				<div class="col-md-12  boderbot">
-					<hr>
 					<center><h6>Hóa Đơn</h6></center>
 				</div><br>
-				
+				<div class="boder1">
 				<?php $tgt=0; foreach ($_SESSION['cart_product'] as $key) { $tt=$key['SoLuong']*$key['DonGia'];?>
 				<div class="dh row">
 					<div class="col-md-9 ">
@@ -76,7 +61,10 @@
 					<div class="col-md-9 "><label > Tổng : </label></div>
 					<div class="col-md-3 "><label ><?php echo number_format($tgt).'đ';?></label></div>
 					<input hidden name="tt" value="<?php echo $tgt ?>">
+				</div>					
 				</div>
+		
+				
 			</div>
 		</div>
 	</form>	

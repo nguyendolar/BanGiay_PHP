@@ -6,7 +6,7 @@
              <table class="table table-hover  text-center " >
 				<thead class="badge-info">
 					<tr>
-						<th>Mã Hóa Đơn</th> <th>Mã Khách Hàng</th><th>Mã Nhân Viên</th><th>Ngày Đặt</th><th>Tổng Tiền</th><th>Tình trạng</th><th>Chi Tiết</th><th colspan ="2" class="badge-danger"></th>
+						<th>Mã Hóa Đơn</th> <th>Khách Hàng</th><th>Ngày Đặt</th><th>Tổng Tiền</th><th>Tình trạng</th><th>Chi Tiết</th><th colspan ="2" class="badge-danger"></th>
 					</tr>
 				</thead>
 				<tbody>
@@ -20,17 +20,16 @@
 
 			 		if(isset($_GET['dk'])){
 			 			$dk=$_GET['dk'];
-			 			$sql="SELECT * from hoadon  where TinhTrang='".$dk."' Order  by NgayDat DESC LIMIT $from,30";
+			 			$sql="SELECT a.*, b.TenKH from hoadon as a, khachhang as b  where a.MaKH = b.MaKH a.TinhTrang='".$dk."' Order  by a.NgayDat DESC LIMIT $from,30";
 			 		}else{
-			 			$sql="select * from hoadon Order  by NgayDat DESC LIMIT $from,30";
+			 			$sql="select a.*, b.TenKH from hoadon as a, khachhang as b Order  by a.NgayDat DESC LIMIT $from,30";
 			 		}
 			 		
 					$rs=mysqli_query($conn,$sql); $so=0;
 				 	while ($row=mysqli_fetch_array($rs)) { ?>
 						<tr>
 							<td><?php echo $row['MaHD']; ?></td>
-							<td><?php echo $row['MaKH']; ?></td>
-							<td><?php echo $row['MaNV']; ?></td>
+							<td><?php echo $row['TenKH']; ?></td>
 							<td><?php echo $row['NgayDat']; ?></td>
 							<td><?php echo number_format($row['TongTien']).' đ'; ?></td>
 							<td><?php if( $row['TinhTrang']==='chưa duyệt') {?>
@@ -52,7 +51,7 @@
 							<?php } ?>
 								
 							</td>
-							<td><a class="nav-link text-info" href="index.php?action=xldathang&view=ctdh&mahd=<?php echo $row['MaHD']; ?>" >Detail </a></td>
+							<td><a class="nav-link text-info" href="index.php?action=xldathang&view=ctdh&mahd=<?php echo $row['MaHD']; ?>" >Chi tiết </a></td>
 							<td><?php if($row['TinhTrang']==="chưa duyệt"){echo '<a class="text-info" href="dondathang/xuly.php?action=duyet&mahd='.$row['MaHD'].'" >Duyệt <i class="fas fa-check"></i> </a>';}?></td>
 							<td><?php if($row['TinhTrang']==="chưa duyệt"){ ?>
 								<a class="text-info" href="dondathang/xuly.php?action=huy&mahd=<?php echo $row['MaHD']; ?>" ><i class="fas fa-backspace"></i></a></td>

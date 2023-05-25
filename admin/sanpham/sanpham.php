@@ -7,7 +7,7 @@
             }
             else{ $trang=1;}
             $from =($trang-1)*20;
-            $sql="SELECT * FROM `sanpham`   LIMIT $from,20 ";
+            $sql="SELECT * FROM `sanpham` ORDER BY MaSP DESC   LIMIT $from,20 ";
             $rs=mysqli_query($conn,$sql);
             $so=mysqli_num_rows($rs);
 ?>
@@ -17,7 +17,7 @@
 	  <h4 class="page-title">
 	    <span class="page-title-icon bg-gradient-primary text-white mr-2">
 	      
-	    </span> ADMIN - J's Sneaker &#160;<i class="fas fa-chevron-right" style="font-size: 18px"></i>&#160; Sản Phẩm</h4>
+	    </span> ADMIN - T-Shoes &#160;<i class="fas fa-chevron-right" style="font-size: 18px"></i>&#160; Sản Phẩm</h4>
 	</div>
 	<div class="card card-body ">
 			<?php include_once('sanpham/main.php');?>

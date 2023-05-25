@@ -8,7 +8,7 @@
 		<div class=" alert alert-primary">
 		  <h4 class="page-title">
 		    <span class="page-title-icon bg-gradient-primary text-white mr-2">
-		    </span> ADMIN - J's Sneaker &#160;<i class="fas fa-chevron-right" style="font-size: 18px"></i>&#160; Kho Hàng &#160;<i class="fas fa-chevron-right" style="font-size: 18px"></i>&#160; Xuất / Nhập Kho</h4>
+		    </span> ADMIN - T-Shoes &#160;<i class="fas fa-chevron-right" style="font-size: 18px"></i>&#160; Kho Hàng &#160;<i class="fas fa-chevron-right" style="font-size: 18px"></i>&#160; Xuất / Nhập Kho</h4>
 		</div><br>
 
 	<div class="row">

@@ -56,11 +56,11 @@
 
 	</div>
 
-		<div class="col-12" >
+		<!-- <div class="col-12" >
 			<center>
 				<button type="sub" name="dk" value="đã duyệt"class="btn btn-primary" style="font-family: Comfortaa;">In hóa Đơn</button>
 			</center>
-		</div>
+		</div> -->
 				
 </div>
 

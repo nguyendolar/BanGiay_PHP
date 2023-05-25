@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>J's Sneaker</title>
+  <title>T-Shoes</title>
     <link href="webroot/font/Font Awesome/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="webroot/bootstrap4/css/bootstrap.css">
     <link rel="stylesheet" href="webroot/web.css">

@@ -37,14 +37,14 @@
   $query_slide=mysqli_query($conn,$slide);
  
 ?>
-<div class="" style="width:1200px;margin-left:75px">
+<!-- <div class="" style="width:1200px;margin-left:75px">
 	<?php while ($list=mysqli_fetch_array($query_slide)) { ?>
   <img class="mySlides"  src="./webroot/img/sanpham/<?php echo $list['image'];?>" style="display:none;width:100%;height:500px">
   <?php } ?>
 
   <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
   <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
-</div>
+</div> -->
 <div class="container-fluid ">
 	<div class="container">
 	

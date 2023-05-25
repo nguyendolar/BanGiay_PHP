@@ -28,7 +28,7 @@ $sql3="INSERT INTO `chitiethoadon`(`MaHD`, `MaSP`, `SoLuong`, `DonGia`, `ThanhTi
 			$rs4=mysqli_query($conn,$sql4);
 			if($rs4){
 				unset($_SESSION['cart_product']);
-				header('location:/JsSneaker/index.php?view=thanks');
+				header('location:/shopgiay/index.php?view=thanks');
 			}
 		}
 		

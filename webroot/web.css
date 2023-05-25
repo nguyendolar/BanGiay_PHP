@@ -1,22 +1,22 @@
 @font-face{
 	font-family: "Comfortaa"; 
-	src: url('/JsSneaker/webroot/font/Comfortaa/Comfortaa-VariableFont_wght.ttf');
+	src: url('/shopgiay/webroot/font/Comfortaa/Comfortaa-VariableFont_wght.ttf');
 }
 @font-face{
 	font-family: "Poiret_One"; 
-	src: url('/JsSneaker/webroot/font/Poiret_One/PoiretOne-Regular.ttf');
+	src: url('/shopgiay/webroot/font/Poiret_One/PoiretOne-Regular.ttf');
 }
 @font-face{
 	font-family: "Faster_One"; 
-	src: url('/JsSneaker/webroot/font/Faster_One/FasterOne-Regular.ttf');
+	src: url('/shopgiay/webroot/font/Faster_One/FasterOne-Regular.ttf');
 }
 @font-face{
 	font-family: "Sriracha"; 
-	src: url('/JsSneaker/webroot/font/Sriracha/Sriracha-Regular.ttf');
+	src: url('/shopgiay/webroot/font/Sriracha/Sriracha-Regular.ttf');
 }
 @font-face{
 	font-family: "Alata"; 
-	src: url('/JsSneaker/webroot/font/Alata/Alata-Regular.ttf');
+	src: url('/shopgiay/webroot/font/Alata/Alata-Regular.ttf');
 }
 /*------------ header --------------*/
 
@@ -230,7 +230,7 @@
 .bg {
 	color: #fff;
 	margin-top: 50px;
-	background-image: url("/JsSneaker/webroot/img/bannerbally.png");
+	background-image: url("/shopgiay/webroot/img/bannerbally.png");
 	height: 435px;
 	width: 100%;
 	display: block;

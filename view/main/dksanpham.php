@@ -103,7 +103,7 @@
       <ul class="pagination justify-content-center">
          <?php for($x=1;$x<=$sotrang;$x++){ ?>
           <li class="page-item">
-          	  <a class="page-link" href="/JsSneaker/index.php?view=dksanpham&madm=<?php echo $madm;?>&t=<?php echo $t ?>&trang=<?php echo $x ?>&sx=<?php echo $sx1 ?>"><?php echo $x ;?></a></li>
+          	  <a class="page-link" href="/shopgiay/index.php?view=dksanpham&madm=<?php echo $madm;?>&t=<?php echo $t ?>&trang=<?php echo $x ?>&sx=<?php echo $sx1 ?>"><?php echo $x ;?></a></li>
           <?php } ?>
 
 
@@ -221,7 +221,7 @@
       <ul class="pagination justify-content-center">
          <?php for($x=1;$x<=$sotrang;$x++){ ?>
           <li class="page-item">
-          	  <a class="page-link" href="/JsSneaker/index.php?view=dksanpham&mancc=<?php echo $mancc;?>&t=<?php echo $t ?>&trang=<?php echo $x ?>&sx=<?php echo $sx1 ?>"><?php echo $x ;?></a></li>
+          	  <a class="page-link" href="/shopgiay/index.php?view=dksanpham&mancc=<?php echo $mancc;?>&t=<?php echo $t ?>&trang=<?php echo $x ?>&sx=<?php echo $sx1 ?>"><?php echo $x ;?></a></li>
           <?php } ?>
       </ul>
 		<form action="" method="get" accept-charset="utf-8">

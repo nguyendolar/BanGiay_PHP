@@ -97,8 +97,4 @@
               <p class="ft"><?php echo $kq['MoTa'];?></p>
 	</div>
 	<div class="col-md-6 "></div>
-	<div class="col-md-6 ">
-			 <hr>
-              <?php include_once('view/main/binhluan.php');?>
-	</div>
 </div>

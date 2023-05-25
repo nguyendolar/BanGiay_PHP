@@ -4,9 +4,9 @@
 	
 </head>
 <body>
- 	<div class="container-fluid bg">
+ 	<div class="container-fluid bg" style="height : 63px !important">
  		<div class="row">
- 			<div class="col-5 ">
+ 			<!-- <div class="col-5 ">
 				<img class="margin imglogo" src="webroot/img/logo2.png" >
 				<h6 class="chutrang"><i class="fas fa-home"></i>&#160;&#160; Số 451 Hoàng Diệu - Thành phố Đà Nẵng</h6>
 				<h6 class="chutrang2"><i class="fas fa-phone-alt"></i> &#160;&#160; 0945.766.448 </h6>
@@ -37,10 +37,10 @@
 								  		<i class="fab fa-instagram"></i></a>
 				</label>
 				<img class="margin imglogo3" src="webroot/img/1.jpg" >
-			</div>
+			</div> -->
 			<div class="col-12">
 				<br>
-				<h3 class="chutrang text-center">Copyrights © 2019 by DinhTri Official. Powered by J's Sneaker</h3>
+				<h3 class="chutrang text-center">Copyrights © 20123 by T-Shoes</h3>
 			</div>
  		</div>
  			

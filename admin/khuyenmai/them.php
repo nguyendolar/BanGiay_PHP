@@ -2,7 +2,7 @@
     <div class=" alert alert-primary">
       <h4 class="page-title">
         <span class="page-title-icon bg-gradient-primary text-white mr-2">
-        </span> ADMIN - J's Sneaker &#160;<i class="fas fa-chevron-right" style="font-size: 18px"></i>&#160; Khuyến mãi</h4>
+        </span> ADMIN - T-Shoes &#160;<i class="fas fa-chevron-right" style="font-size: 18px"></i>&#160; Khuyến mãi</h4>
     </div>
     <div class="card card-body ">
 <form class="form-row " method="GET" action="khuyenmai/xuly.php" enctype="multipart/form-data">

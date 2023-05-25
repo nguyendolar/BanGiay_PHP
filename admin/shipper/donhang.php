@@ -21,52 +21,9 @@
 	<div class=" alert alert-primary">
 	  <h4 class="page-title">
 	    <span class="page-title-icon bg-gradient-primary text-white mr-2">
-	    </span> ADMIN - J's Sneaker &#160;<i class="fas fa-chevron-right" style="font-size: 18px"></i>&#160; Giao Hàng &#160;<i class="fas fa-chevron-right" style="font-size: 18px"></i>&#160; <?php echo $dk ?></h4>
+	    </span> ADMIN - T-Shoes &#160;<i class="fas fa-chevron-right" style="font-size: 18px"></i>&#160; Giao Hàng &#160;<i class="fas fa-chevron-right" style="font-size: 18px"></i>&#160; <?php echo $dk ?></h4>
 	</div>
 	<br>
-	<div class="row">
-        <form action="?action=giaohang" method="POST" class="col-md-4 grid-margin stretch-card">
-			<div class="card">
-				<div class="card-body ">
-					<button type="sub" name="dk" value="Chưa Giao" class="btn btn-primary btn-sm" style="font-family: Comfortaa;">Chờ xử lý</button>
-					<span class="counter counter-sm "><?php echo $dem ?></span>
-		         	<button type="sub" name="dk" value="Đã Giao"class="btn btn-primary btn-sm" style="font-family: Comfortaa;">Đã Giao</button>
-		    	</div>
-			</div>
-		</form>
-
-		 <div class="col-xl-4 col-md-4 mb-4">
-          <div class="card border-left-warning shadow h-100 py-0">
-            <div class="card-body">
-              <div class="row no-gutters align-items-center">
-                <div class="col mr-2">
-                  <div class="text-xs font-weight-bold text-success text-uppercase mb-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Đơn Hàng (Tháng)</font></font></div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><?php echo $order ?></font></font></div>
-                </div>
-                <div class="col-auto">
-                 <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-4 col-md-4 mb-4">
-          <div class="card border-left-warning shadow h-100 py-0">
-            <div class="card-body">
-              <div class="row no-gutters align-items-center">
-                <div class="col mr-2">
-                  <div class="text-xs font-weight-bold text-success text-uppercase mb-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Đơn Hàng (ALL)</font></font></div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><?php echo $order2 ?></font></font></div>
-                </div>
-                <div class="col-auto">
-                 <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-		
-	</div><br>
 	<?php 
 
 	switch ($dk) {
@@ -93,7 +50,7 @@
 							<td><?php echo $row['NgayGiao']; ?></td>
 							<td><?php echo number_format($row['TongTien']).'.đ'; ?></td>
 							<td><?php echo $row['TinhTrang']; ?></td>
-							<td><a class="text-info" href="index.php?action=giaohang&view=ctgh&mahd=<?php echo $row['MaHD']; ?>" >Detail </a></td>
+							<td><a class="text-info" href="index.php?action=giaohang&view=ctgh&mahd=<?php echo $row['MaHD']; ?>" >Chi tiết </a></td>
 							<td ><?php if($row['TinhTrang']==="Đã duyệt"){echo '<a class="text-info" href="shipper/xuly.php?action=duyet&mahd='.$row['MaHD'].'" >Đã Giao Hàng <i class="fas fa-check"></i> </a>';}?></td>
 							</tr>
 				 <?php	} ?>

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th1 03, 2022 lúc 12:21 PM
--- Phiên bản máy phục vụ: 10.4.11-MariaDB
--- Phiên bản PHP: 7.2.31
+-- Thời gian đã tạo: Th5 25, 2023 lúc 05:45 AM
+-- Phiên bản máy phục vụ: 10.4.21-MariaDB
+-- Phiên bản PHP: 7.3.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -62,6 +62,16 @@ CREATE TABLE `chitiethoadon` (
   `MaMau` varchar(50) COLLATE utf8mb4_vietnamese_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
+--
+-- Đang đổ dữ liệu cho bảng `chitiethoadon`
+--
+
+INSERT INTO `chitiethoadon` (`MaHD`, `MaSP`, `SoLuong`, `DonGia`, `ThanhTien`, `Size`, `MaMau`) VALUES
+(68, 4, 1, '3829000', '3829000', 36, 'none'),
+(69, 10, 2, '5589000', '11178000', 39, 'Trắng'),
+(70, 10, 1, '5589000', '5589000', 39, 'Trắng'),
+(71, 55, 1, '1330000', '1330000', 39, 'Đen ');
+
 -- --------------------------------------------------------
 
 --
@@ -80,7 +90,7 @@ CREATE TABLE `chitietsanpham` (
 --
 
 INSERT INTO `chitietsanpham` (`MaSP`, `MaSize`, `MaMau`, `SoLuong`) VALUES
-(4, 36, 'none', 60),
+(4, 36, 'none', 59),
 (4, 37, 'none', 100),
 (4, 38, 'none', 100),
 (4, 39, 'none', 100),
@@ -108,7 +118,7 @@ INSERT INTO `chitietsanpham` (`MaSP`, `MaSize`, `MaMau`, `SoLuong`) VALUES
 (9, 40, 'Đen - Trắng', 40),
 (9, 41, 'Đen - Trắng', 40),
 (9, 42, 'Đen - Trắng', 40),
-(10, 39, 'Trắng', 87),
+(10, 39, 'Trắng', 85),
 (10, 40, 'Trắng', 100),
 (10, 41, 'Trắng', 100),
 (10, 42, 'Trắng', 100),
@@ -128,7 +138,7 @@ INSERT INTO `chitietsanpham` (`MaSP`, `MaSize`, `MaMau`, `SoLuong`) VALUES
 (54, 41, 'Đen ', 500),
 (54, 42, 'Đen ', 500),
 (54, 43, 'Đen ', 500),
-(55, 39, 'Đen ', 194),
+(55, 39, 'Đen ', 193),
 (55, 40, 'Đen ', 200),
 (55, 41, 'Đen ', 200),
 (56, 38, 'Đen - Trắng', 100),
@@ -253,6 +263,16 @@ CREATE TABLE `hoadon` (
   `MaNVGH` varchar(50) COLLATE utf8mb4_vietnamese_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
+--
+-- Đang đổ dữ liệu cho bảng `hoadon`
+--
+
+INSERT INTO `hoadon` (`MaHD`, `MaKH`, `MaNV`, `NgayDat`, `NgayGiao`, `TinhTrang`, `TongTien`, `MaNVGH`) VALUES
+(68, 15, 3, '2023-05-25 09:48:00', '2023-05-26 10:20:57', 'hoàn thành', '3829000', '3'),
+(69, 15, 3, '2023-05-25 10:14:26', '2023-05-26 10:20:56', 'hoàn thành', '11178000', '3'),
+(70, 15, 3, '2023-05-25 10:32:56', NULL, 'Hủy Bỏ', '5589000', NULL),
+(71, 15, 3, '2023-05-25 10:40:24', '2023-05-26 10:40:28', 'hoàn thành', '1330000', '3');
+
 -- --------------------------------------------------------
 
 --
@@ -267,6 +287,13 @@ CREATE TABLE `khachhang` (
   `DiaChi` text COLLATE utf8mb4_vietnamese_ci NOT NULL,
   `MatKhau` varchar(50) COLLATE utf8mb4_vietnamese_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `khachhang`
+--
+
+INSERT INTO `khachhang` (`MaKH`, `TenKH`, `Email`, `SDT`, `DiaChi`, `MatKhau`) VALUES
+(15, 'Bùi Văn Lan', 'builan@gmail.com', 394073746, 'Hà Nội', '123456');
 
 -- --------------------------------------------------------
 
@@ -321,6 +348,16 @@ CREATE TABLE `nguoinhan` (
   `SDTNN` int(12) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
+--
+-- Đang đổ dữ liệu cho bảng `nguoinhan`
+--
+
+INSERT INTO `nguoinhan` (`MaHD`, `TenNN`, `DiaChiNN`, `SDTNN`) VALUES
+(68, 'Bùi Văn Lan', 'Hà Nội', 394073746),
+(69, 'Bùi Văn Lan', 'Hà Nội', 394073746),
+(70, 'Bùi Văn Lan', 'Hà Nội', 394073746),
+(71, 'Bùi Văn Lan', 'Hà Nội', 394073746);
+
 -- --------------------------------------------------------
 
 --
@@ -365,7 +402,7 @@ CREATE TABLE `nhanvien` (
 --
 
 INSERT INTO `nhanvien` (`MaNV`, `TenNV`, `Email`, `SDT`, `DiaChi`, `MatKhau`, `Quyen`) VALUES
-(3, 'Admin', 'admin.jssneaker@gmail.com', 905027527, 'Số 451 Hoàng Diệu - Thành phố Đà Nẵng', 'admin', 1),
+(3, 'Admin', 'admin@gmail.com', 905027527, 'Số 451 Hoàng Diệu - Thành phố Đà Nẵng', '123456', 1),
 (6, 'Nhân viên', 'nhanvien@gmail.com', 39212456, 'Đà Nẵng', '123456789', 5);
 
 -- --------------------------------------------------------
@@ -452,17 +489,17 @@ CREATE TABLE `sanpham` (
 --
 
 INSERT INTO `sanpham` (`MaSP`, `TenSP`, `MaDM`, `MaNCC`, `SoLuong`, `MoTa`, `DonGia`, `MaAnh`, `AnhNen`) VALUES
-(4, 'Nike Free Metcon 2 UT', 3, 1, 760, 'Nike Free Metcon 2 UT mang đến một lớp hỗ trợ khác cho một loạt các bài tập huấn luyện. Dây đai bền giúp giữ bàn chân của bạn, trong khi bọt linh hoạt giúp bạn di chuyển tự nhiên từ trọng lượng đến máy khoan nhanh nhẹn.', '3829000', NULL, 'NikeFreeMetcon2UT.png'),
+(4, 'Nike Free Metcon 2 UT', 3, 1, 759, 'Nike Free Metcon 2 UT mang đến một lớp hỗ trợ khác cho một loạt các bài tập huấn luyện. Dây đai bền giúp giữ bàn chân của bạn, trong khi bọt linh hoạt giúp bạn di chuyển tự nhiên từ trọng lượng đến máy khoan nhanh nhẹn.', '3829000', NULL, 'NikeFreeMetcon2UT.png'),
 (5, 'Zoom Freak 1', 3, 1, 375, 'Nhận được sự kỳ dị của bạn trong chiếc giày đặc trưng đầu tay của Giannis Antetokounmpo, lần đầu tiên Nike mang lại cảm giác bóng rổ quốc tế. Zoom Freak 1 có bộ đệm siêu nhạy, khóa trước và lực kéo đa hướng cần thiết để bổ sung cho trò chơi thể thao kỳ dị của anh ta.', '3519000', NULL, 'ZoomFreak1.png'),
 (6, 'Nike Air VaporMax Flyknit 3', 3, 1, 200, 'Nổi bật và bồng bềnh trong Nike Air VaporMax Flyknit 3. Các tính năng phía trên chảy 2 dòng của cấu trúc Flyknit thoáng khí, có thể kéo dài cho phong cách độc đáo, sẵn sàng trên đường phố. Công nghệ VaporMax Air mang tính cách mạng giúp duy trì mùa xuân trong bước chân của bạn với đệm từ gót chân đến gót chân.', '3500000', NULL, 'NikeAirVaporMaxFlyknit3.png'),
 (7, 'Nike Drop-Type Premium', 1, 1, 201, 'Nike Drop-Type Premium được lấy cảm hứng từ những đôi giày tennis cổ điển trong gia đình NikeCourt. Một phần của gia đình N354 gật đầu với dặm bay nhanh nhất của Steve Prefontaine, nó cung cấp các dòng thiết kế riêng biệt mượn từ All Court 2.', '2499000', '', 'NikeDropTypePremium.png'),
 (9, 'Nike Zoom Rival Fly', 1, 1, 198, 'Lấy cảm hứng từ các vận động viên tiếp sức Ekiden của Nhật Bản, Nike Zoom Rival Fly mang dáng vẻ tương lai với bộ phận Zoom Air ở bàn chân trước mang đến cho bạn lực đẩy nhạy. Rãnh uốn cong bên dưới tối ưu hóa ngón chân cái và đệm bọt mềm mại sải chân của bạn. Lưới và tổng hợp trên pha trộn sức mạnh và hơi thở.', '2649000', NULL, 'NikeZoomRivalFly.png'),
-(10, 'Nike Air Max 720 Waves', 1, 1, 387, 'Mang lại một quan điểm mới cho văn hóa ngoài tòa án trong Nike Air Max 720 Waves của bạn. Lập trường cấu hình thấp của nó cho thấy đơn vị Air cao nhất của Nike cho đến nay trong khi thiết kế D / MS / X của nó pha trộn văn hóa với thể thao, cho phép bạn bước vào một chiều hướng mới của phong cách hoops với sự thoải mái vô song.', '5589000', NULL, 'NikeAirMax720Waves.PNG'),
+(10, 'Nike Air Max 720 Waves', 1, 1, 385, 'Mang lại một quan điểm mới cho văn hóa ngoài tòa án trong Nike Air Max 720 Waves của bạn. Lập trường cấu hình thấp của nó cho thấy đơn vị Air cao nhất của Nike cho đến nay trong khi thiết kế D / MS / X của nó pha trộn văn hóa với thể thao, cho phép bạn bước vào một chiều hướng mới của phong cách hoops với sự thoải mái vô song.', '5589000', NULL, 'NikeAirMax720Waves.PNG'),
 (11, 'Nike Zoom Fly Flyknit ', 1, 1, 385, 'Giày chạy bộ Nike Zoom Fly Flyknit được sản xuất với tốc độ kỷ lục. Flyknit trên cung cấp hỗ trợ siêu nhẹ phù hợp như một chiếc găng tay.', '4699000', NULL, 'NikeZoomFlyFlyknit.png'),
 (12, 'Nike SB Solarsoft Portmore II', 1, 1, 299, 'Được thiết kế cho đế giày đặc biệt, Giày trượt ván nam Nike SB Solarsoft Portmore II kết hợp đệm mềm với đế ngoài bền, chắc chắn để bạn có thể tập trung vào buổi tập của mình.', '2069000', NULL, 'NikeSBSolarsoftPortmoreII.PNG'),
 (53, 'BALENCIAGA TRIPLE S 2019', 1, 4, 494, 'ok', '1700000', NULL, 'BALENCIAGA TRIPLE S.PNG'),
 (54, 'BALENCIAGA SPEED TRAINER ĐEN', 3, 4, 4000, 'Một sản phẩm tuyệt vời được nhiều bạn trẻ lựa chọn.', '730000', NULL, 'BALENCIAGA SPEED TRAINER ĐEN.PNG'),
-(55, 'BALENCIAGA BALEN DAD', 1, 4, 594, 'Đây là mẫu giày cũng được nhiều người nghệ sĩ thế giới lựa chọn. Tại Việt Nam, giày Triple S được rất nhiều nghệ sĩ nổi tiếng yêu thích.\r\n\r\nThiết kế đột phá.\r\nMột đôi giày ra đời đã phá vỡ những tiêu chuẩn về thời trang hiện nay.\r\nPhần đế cao, uốn lượn hơn hẳn để bạn ăn gian thêm vài centimet\r\nPha trộn những gam màu vintage và nhiều chất liệu vải khác nhau.\r\nTrên thân, gót hay đế giày cũng đều được thêu và khắc tên thương hiệu, tạo sự đẳng cấp.', '1330000', NULL, 'BALEN DAD.PNG'),
+(55, 'BALENCIAGA BALEN DAD', 1, 4, 593, 'Đây là mẫu giày cũng được nhiều người nghệ sĩ thế giới lựa chọn. Tại Việt Nam, giày Triple S được rất nhiều nghệ sĩ nổi tiếng yêu thích.\r\n\r\nThiết kế đột phá.\r\nMột đôi giày ra đời đã phá vỡ những tiêu chuẩn về thời trang hiện nay.\r\nPhần đế cao, uốn lượn hơn hẳn để bạn ăn gian thêm vài centimet\r\nPha trộn những gam màu vintage và nhiều chất liệu vải khác nhau.\r\nTrên thân, gót hay đế giày cũng đều được thêu và khắc tên thương hiệu, tạo sự đẳng cấp.', '1330000', NULL, 'BALEN DAD.PNG'),
 (56, 'Balenciaga Track', 3, 4, 399, '', '1700000', NULL, 'Balenciaga Track.PNG'),
 (68, 'Off-White & Orange Track', 1, 6, 1588, 'ok', '1230000', NULL, 'Black OG Old Skool LX.PNG'),
 (69, 'BALENCIAGA TRIPLE S 2018', 1, 4, 300, 'sản phẩm hot 2017', '1700000', NULL, 'Off-White & Orange Track.PNG'),
@@ -696,13 +733,13 @@ ALTER TABLE `danhmuc`
 -- AUTO_INCREMENT cho bảng `hoadon`
 --
 ALTER TABLE `hoadon`
-  MODIFY `MaHD` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
+  MODIFY `MaHD` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
 
 --
 -- AUTO_INCREMENT cho bảng `khachhang`
 --
 ALTER TABLE `khachhang`
-  MODIFY `MaKH` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `MaKH` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT cho bảng `khuyenmai`
@@ -738,7 +775,7 @@ ALTER TABLE `phieuxuat`
 -- AUTO_INCREMENT cho bảng `sanpham`
 --
 ALTER TABLE `sanpham`
-  MODIFY `MaSP` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=82;
+  MODIFY `MaSP` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=83;
 
 --
 -- AUTO_INCREMENT cho bảng `slide`
